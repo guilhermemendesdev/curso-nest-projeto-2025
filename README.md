@@ -18,3 +18,4 @@ Este repositório faz parte de um compromisso pessoal de realizar commits diári
 ### 02/01/2025
 - Entendendo os conceitos básicos do arquivo Main.
 - Entendendo os modulos e criação destes de forma manual e pelo CLI.
+- Entendendo o básico sobre protocolo HTTP, URLs, recursos e métodos de solicitação (GET)
