@@ -14,3 +14,7 @@ Este repositório faz parte de um compromisso pessoal de realizar commits diári
 - Instalação das dependências globais.
 - Instalação do NestJS CLI.
 - Criação do primeiro projeto com conceitos básicos do NestJS.
+
+### 02/01/2025
+- Entendendo os conceitos básicos do arquivo Main.
+- Entendendo os modulos e criação destes de forma manual e pelo CLI.
