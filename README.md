@@ -19,4 +19,9 @@ Este repositório faz parte de um compromisso pessoal de realizar commits diári
 - Entendendo os conceitos básicos do arquivo Main.
 - Entendendo os modulos e criação destes de forma manual e pelo CLI.
 - Entendendo o básico sobre protocolo HTTP, URLs, recursos e métodos de solicitação (GET)
-- 
+
+### 03/01/2025
+- Utilização da extensão Rest Client do VS Code
+- Criando o primeiro Controller - Manualmente ou com NestJS CLI
+- Service / Provider - entendendo o básico da injeção de dependências do NestJS
+- Criando o primeiro Service - Manualmente ou com NestJS CLI
