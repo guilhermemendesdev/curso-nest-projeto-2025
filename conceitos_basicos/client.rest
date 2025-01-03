@@ -3,3 +3,13 @@
 
 # @name AppControllerGetHello
 GET http://localhost:3000/home/hello
+
+### ConceitosManualController
+
+# @name ConceitosManualController
+GET http://localhost:3000/conceitos-manual
+
+### ConceitosAutomaticoController
+
+# @name ConceitosAutomaticoController
+GET http://localhost:3000/conceitos-automatico
