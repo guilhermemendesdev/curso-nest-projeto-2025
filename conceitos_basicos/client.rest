@@ -2,6 +2,14 @@
 GET http://localhost:3000/recados
 ###
 GET http://localhost:3000/recados/1
+###
+POST http://localhost:3000/recados
+Content-Type: application/json
+
+{
+    "recado": "Recado Teste",
+    "usuario": "Guilherme Mendes"
+}
 
 ### AppControllerGetHello
 
