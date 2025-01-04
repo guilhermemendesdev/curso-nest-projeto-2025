@@ -7,8 +7,8 @@ export class RecadosController {
     return 'Todos os recados';
   }
 
-  @Get('/:id')
+  @Get(':id')
   findOne(@Param('id') id: string) {
-    return 'Apenas UM recado';
+    return `Apenas UM recado:  ${id}`;
   }
 }
