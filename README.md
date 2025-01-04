@@ -25,3 +25,10 @@ Este repositório faz parte de um compromisso pessoal de realizar commits diári
 - Criando o primeiro Controller - Manualmente ou com NestJS CLI
 - Service / Provider - entendendo o básico da injeção de dependências do NestJS
 - Criando o primeiro Service - Manualmente ou com NestJS CLI
+
+### 04/01/2025
+- Novo módulo (module) e controller (controlador) para a nova aplicação NestJS
+- Criando parâmetros de rota de forma dinâmica para o ID do recurso - @Get(':id')
+- Usando o decorator @Param para ler valores dos parâmetros de rota
+- Método HTTP POST e decorator @Post - Uma rota para criar coisas no NestJS
+- Usando o @Body para ler valores do corpo da requisição HTTP POST
