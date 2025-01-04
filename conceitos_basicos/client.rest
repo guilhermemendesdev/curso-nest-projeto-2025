@@ -1,3 +1,7 @@
+# RECADOS
+GET http://localhost:3000/recados
+###
+GET http://localhost:3000/recados/1
 
 ### AppControllerGetHello
 
