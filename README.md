@@ -32,3 +32,9 @@ Este repositório faz parte de um compromisso pessoal de realizar commits diári
 - Usando o decorator @Param para ler valores dos parâmetros de rota
 - Método HTTP POST e decorator @Post - Uma rota para criar coisas no NestJS
 - Usando o @Body para ler valores do corpo da requisição HTTP POST
+
+### 05/01/2025
+- Decorator HttpCode e Enum HttpStatus para códigos de status de respostas HTTP
+- Rota para atualizar um recado (update) com métodos PATCH ou PUT e decoradores
+- Rota para apagar um recado (delete) com método DELETE e decorador Delete
+- Query parameters (parâmetros de consulta) da URL para exemplo de paginação
