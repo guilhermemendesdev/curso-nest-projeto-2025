@@ -11,6 +11,14 @@ Content-Type: application/json
     "usuario": "Guilherme Mendes"
 }
 
+###
+PATCH http://localhost:3000/recados/1
+Content-Type: application/json
+
+{
+    "recado": "Recado Teste"
+}
+
 ### AppControllerGetHello
 
 # @name AppControllerGetHello
