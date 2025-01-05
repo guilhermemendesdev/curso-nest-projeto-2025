@@ -2,6 +2,8 @@
 
 ### Lista todos os recados
 GET http://localhost:3000/recados
+?limit=100
+&offset=200
 ### Busca apenas UM recado
 GET http://localhost:3000/recados/1
 ### Cria um recado
