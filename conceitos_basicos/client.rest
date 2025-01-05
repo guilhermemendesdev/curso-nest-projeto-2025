@@ -1,8 +1,10 @@
 # RECADOS
+
+### Lista todos os recados
 GET http://localhost:3000/recados
-###
+### Busca apenas UM recado
 GET http://localhost:3000/recados/1
-###
+### Cria um recado
 POST http://localhost:3000/recados
 Content-Type: application/json
 
@@ -11,7 +13,7 @@ Content-Type: application/json
     "usuario": "Guilherme Mendes"
 }
 
-###
+### Atualiza um recado
 PATCH http://localhost:3000/recados/1
 Content-Type: application/json
 
