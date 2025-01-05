@@ -20,6 +20,8 @@ Content-Type: application/json
 {
     "recado": "Recado Teste"
 }
+### Remove apenas UM recado
+DELETE http://localhost:3000/recados/1
 
 ### AppControllerGetHello
 
