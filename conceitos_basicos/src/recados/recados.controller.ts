@@ -1,4 +1,12 @@
-import { Body, Controller, Get, Param, Patch, Post } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Patch,
+  Post,
+} from '@nestjs/common';
 
 @Controller('recados')
 export class RecadosController {
@@ -23,5 +31,10 @@ export class RecadosController {
       id,
       ...body,
     };
+  }
+
+  @Delete(':id')
+  remove(@Param('id') id: string) {
+    return `Essa rota APAGA o registro com o ID ${id}`;
   }
 }
