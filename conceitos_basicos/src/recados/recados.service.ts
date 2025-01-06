@@ -33,4 +33,25 @@ export class RecadosService {
     this.recados.push(novoRecado);
     return novoRecado;
   }
+
+  update(id: string, body: any) {
+    const recadoExisteIndex = this.recados.findIndex(item => item.id === +id);
+
+    if (recadoExisteIndex >= 0) {
+      const recadoExiste = this.recados[recadoExisteIndex];
+
+      this.recados[recadoExisteIndex] = {
+        ...recadoExiste,
+        ...body,
+      };
+    }
+  }
+
+  remove(id: string) {
+    const recadoExisteIndex = this.recados.findIndex(item => item.id === +id);
+
+    if (recadoExisteIndex >= 0) {
+      this.recados.splice(recadoExisteIndex, 1);
+    }
+  }
 }
