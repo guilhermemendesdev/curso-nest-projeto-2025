@@ -30,14 +30,11 @@ export class RecadosController {
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() body: any) {
-    return {
-      id,
-      ...body,
-    };
+    return this.recadosService.update(id, body);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return `Essa rota APAGA o registro com o ID ${id}`;
+    return this.recadosService.remove(id);
   }
 }
