@@ -25,7 +25,7 @@ export class RecadosController {
 
   @Post()
   create(@Body() body: any) {
-    return body;
+    return this.recadosService.create(body);
   }
 
   @Patch(':id')
