@@ -22,4 +22,15 @@ export class RecadosService {
   findOne(id: string) {
     return this.recados.find(item => item.id === +id);
   }
+
+  create(body: any) {
+    this.lastID++;
+    const id = this.lastID;
+    const novoRecado = {
+      id,
+      ...body,
+    };
+    this.recados.push(novoRecado);
+    return novoRecado;
+  }
 }
