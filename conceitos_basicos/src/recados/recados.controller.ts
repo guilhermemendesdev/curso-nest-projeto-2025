@@ -6,7 +6,6 @@ import {
   Param,
   Patch,
   Post,
-  Query,
 } from '@nestjs/common';
 import { RecadosService } from './recados.service';
 
@@ -15,14 +14,13 @@ export class RecadosController {
   constructor(private readonly recadosService: RecadosService) {}
 
   @Get()
-  findAll(@Query() pagination: any) {
-    const { limit = 10, offset = 10 } = pagination;
-    return this.recadosService.getAll(limit, offset);
+  findAll() {
+    return this.recadosService.findAll();
   }
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return `Apenas UM recado:  ${id}`;
+    return this.recadosService.findOne(id);
   }
 
   @Post()
