@@ -38,3 +38,8 @@ Este repositório faz parte de um compromisso pessoal de realizar commits diári
 - Rota para atualizar um recado (update) com métodos PATCH ou PUT e decoradores
 - Rota para apagar um recado (delete) com método DELETE e decorador Delete
 - Query parameters (parâmetros de consulta) da URL para exemplo de paginação
+
+### 06/01/2025
+- Configurando o VS Code, tema, Eslint e Prettier para manter um código uniforme
+- Criando o provider (service) RecadosService
+- Criando uma Entity (Entidade) Recado e concluindo nosso service de BD em memória
