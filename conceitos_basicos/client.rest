@@ -5,7 +5,7 @@ GET http://localhost:3000/recados
 ?limit=100
 &offset=200
 ### Busca apenas UM recado
-GET http://localhost:3000/recados/1
+GET http://localhost:3000/recados/2
 ### Cria um recado
 POST http://localhost:3000/recados
 Content-Type: application/json
