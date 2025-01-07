@@ -1,5 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { Recado } from './entities/recado.entity';
+import { CreateRecadoDto } from './dto/create-recado.dto';
+import { UpdateRecadoDto } from './dto/update-recado.dto';
 
 @Injectable()
 export class RecadosService {
@@ -28,18 +30,20 @@ export class RecadosService {
     return recado;
   }
 
-  create(body: any) {
+  create(createRecadoDto: CreateRecadoDto) {
     this.lastID++;
     const id = this.lastID;
     const novoRecado = {
       id,
-      ...body,
+      ...createRecadoDto,
+      lido: false,
+      data: new Date(),
     };
     this.recados.push(novoRecado);
     return novoRecado;
   }
 
-  update(id: string, body: any) {
+  update(id: string, updateRecadoDto: UpdateRecadoDto) {
     const recadoExisteIndex = this.recados.findIndex(item => item.id === +id);
 
     if (recadoExisteIndex < 0)
@@ -49,7 +53,7 @@ export class RecadosService {
 
     this.recados[recadoExisteIndex] = {
       ...recadoExiste,
-      ...body,
+      ...updateRecadoDto,
     };
   }
 
