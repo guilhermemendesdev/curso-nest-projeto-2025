@@ -43,3 +43,8 @@ Este repositório faz parte de um compromisso pessoal de realizar commits diári
 - Configurando o VS Code, tema, Eslint e Prettier para manter um código uniforme
 - Criando o provider (service) RecadosService
 - Criando uma Entity (Entidade) Recado e concluindo nosso service de BD em memória
+
+### 07/01/2025
+- Usando HttpException e NotFoundException para exibir mensagens de erro HTTP
+- DTOs (Data Transfer Object) para transportar, validar e transformar dados
+- Validando dados de entrada com useGlobalPipes, ValidationPipe e class-validator
