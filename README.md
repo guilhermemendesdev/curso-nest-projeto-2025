@@ -48,3 +48,8 @@ Este repositório faz parte de um compromisso pessoal de realizar commits diári
 - Usando HttpException e NotFoundException para exibir mensagens de erro HTTP
 - DTOs (Data Transfer Object) para transportar, validar e transformar dados
 - Validando dados de entrada com useGlobalPipes, ValidationPipe e class-validator
+
+### 08/01/2025
+- Usando PartialType de Mapped-Types para a validação de campos em UpdateRecadoDto
+- Segurança - opções whitelist e forbidNonWhitelisted de ValidationPipe do NestJS
+- Converter tipos c/ transform do ValidationPipe e Pipes de Param padrão no NestJS
