@@ -42,17 +42,14 @@ export class RecadosService {
     return recado;
   }
 
-  create(createRecadoDto: CreateRecadoDto) {
-    this.lastID++;
-    const id = this.lastID;
+  async create(createRecadoDto: CreateRecadoDto) {
     const novoRecado = {
-      id,
       ...createRecadoDto,
       lido: false,
       data: new Date(),
     };
-    this.recados.push(novoRecado);
-    return novoRecado;
+    const recado = this.recadoRepository.create(novoRecado);
+    return await this.recadoRepository.save(recado);
   }
 
   update(id: number, updateRecadoDto: UpdateRecadoDto) {
