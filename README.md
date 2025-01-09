@@ -53,3 +53,11 @@ Este repositório faz parte de um compromisso pessoal de realizar commits diári
 - Usando PartialType de Mapped-Types para a validação de campos em UpdateRecadoDto
 - Segurança - opções whitelist e forbidNonWhitelisted de ValidationPipe do NestJS
 - Converter tipos c/ transform do ValidationPipe e Pipes de Param padrão no NestJS
+
+### 09/01/2025
+- Instalando o Banco de Dados PostgreSQL 16 e o DBeaver CE no Windows
+- Configurando o TypeOrmModule com PostgreSQL (módulo do TypeORM para NestJS)
+- Primeira Entity do TypeOrm no NestJS (primeira tabela na base de dados PSQL)
+- Usando InjectRepository e Repository para ler e manipular a entity na tabela
+- Usando o Repository para criar (create) e apagar (delete) uma Entity da tabela
+- Usando o Repository para atualizar (update) uma Entity na tabela
