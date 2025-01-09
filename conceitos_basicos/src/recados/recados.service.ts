@@ -66,16 +66,15 @@ export class RecadosService {
     };
   }
 
-  remove(id: number) {
-    const recadoExisteIndex = this.recados.findIndex(item => item.id === id);
+  async remove(id: number) {
+    const recado = await this.recadoRepository.findOne({
+      where: {
+        id,
+      },
+    });
 
-    if (recadoExisteIndex < 0)
-      throw new NotFoundException('Recado não encontrado');
+    if (!recado) throw new NotFoundException('Recado não encontrado');
 
-    const recado = this.recados[recadoExisteIndex];
-
-    this.recados.splice(recadoExisteIndex, 1);
-
-    return recado;
+    return await this.recadoRepository.remove(recado);
   }
 }
