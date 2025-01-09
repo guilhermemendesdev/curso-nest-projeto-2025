@@ -52,18 +52,19 @@ export class RecadosService {
     return await this.recadoRepository.save(recado);
   }
 
-  update(id: number, updateRecadoDto: UpdateRecadoDto) {
-    const recadoExisteIndex = this.recados.findIndex(item => item.id === id);
-
-    if (recadoExisteIndex < 0)
-      throw new NotFoundException('Recado não encontrado');
-
-    const recadoExiste = this.recados[recadoExisteIndex];
-
-    this.recados[recadoExisteIndex] = {
-      ...recadoExiste,
-      ...updateRecadoDto,
+  async update(id: number, updateRecadoDto: UpdateRecadoDto) {
+    const updatePartialRecadoDto = {
+      lido: updateRecadoDto?.lido,
+      texto: updateRecadoDto?.texto,
     };
+    const recado = await this.recadoRepository.preload({
+      id,
+      ...updatePartialRecadoDto,
+    });
+
+    if (!recado) throw new NotFoundException('Recado não encontrado');
+
+    return await this.recadoRepository.save(recado);
   }
 
   async remove(id: number) {
