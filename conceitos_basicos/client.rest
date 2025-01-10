@@ -46,3 +46,22 @@ GET http://localhost:3000/conceitos-manual
 
 # @name ConceitosAutomaticoController
 GET http://localhost:3000/conceitos-automatico
+
+
+# PESSOAS
+
+### Lista todas as pessoas
+GET http://localhost:3000/pessoas
+?limit=100
+&offset=200
+### Busca apenas UMA pessoa
+GET http://localhost:3000/pessoas/2
+### Cria uma pessoa
+POST http://localhost:3000/pessoas
+Content-Type: application/json
+
+  {
+    "email": "guilherme@mail.com",
+    "nome": "Guilherme",
+    "password": "123456"
+  }
