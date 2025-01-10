@@ -61,7 +61,15 @@ export class PessoasService {
     return `This action updates a #${id} pessoa`;
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} pessoa`;
+  async remove(id: number) {
+    const pessoa = await this.pessoaRepository.findOne({
+      where: {
+        id,
+      },
+    });
+
+    if (!pessoa) throw new NotFoundException('Pessoa não encotraada');
+
+    return this.pessoaRepository.remove(pessoa);
   }
 }
