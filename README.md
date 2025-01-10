@@ -61,3 +61,9 @@ Este repositório faz parte de um compromisso pessoal de realizar commits diári
 - Usando InjectRepository e Repository para ler e manipular a entity na tabela
 - Usando o Repository para criar (create) e apagar (delete) uma Entity da tabela
 - Usando o Repository para atualizar (update) uma Entity na tabela
+
+### 10/01/2025
+- Criando um módulo (Resource) para Entity "Pessoa" (usuário da nossa aplicação)
+- CRUD de Pessoa: criando o create com e-mail único na tabela (unique)
+- CRUD de Pessoa: criando o findAll, findOne (Read) e remove (Delete)
+- CRUD de Pessoa: criando o Update
