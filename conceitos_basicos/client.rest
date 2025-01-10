@@ -55,7 +55,7 @@ GET http://localhost:3000/pessoas
 ?limit=100
 &offset=200
 ### Busca apenas UMA pessoa
-GET http://localhost:3000/pessoas/2
+GET http://localhost:3000/pessoas/1
 ### Cria uma pessoa
 POST http://localhost:3000/pessoas
 Content-Type: application/json
@@ -65,3 +65,13 @@ Content-Type: application/json
     "nome": "Guilherme",
     "password": "123456"
   }
+### Atualiza um recado
+PATCH http://localhost:3000/pessoas/5
+Content-Type: application/json
+
+  {
+    "nome": "João",
+    "password": "123456"
+  }
+### Remove apenas UM recado
+DELETE http://localhost:3000/pessoas/1
