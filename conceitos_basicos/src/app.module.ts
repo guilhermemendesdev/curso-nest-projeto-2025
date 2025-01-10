@@ -5,6 +5,7 @@ import { ConceitosManualModule } from './conceitos-manual/conceitos-manual.modul
 import { ConceitosAutomaticoModule } from './conceitos-automatico/conceitos-automatico.module';
 import { RecadosModule } from './recados/recados.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { PessoasModule } from './pessoas/pessoas.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     ConceitosManualModule,
     ConceitosAutomaticoModule,
     RecadosModule,
+    PessoasModule,
   ],
   controllers: [AppController],
   providers: [AppService],
