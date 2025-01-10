@@ -1,4 +1,8 @@
-import { ConflictException, Injectable } from '@nestjs/common';
+import {
+  ConflictException,
+  Injectable,
+  NotFoundException,
+} from '@nestjs/common';
 import { CreatePessoaDto } from './dto/create-pessoa.dto';
 import { UpdatePessoaDto } from './dto/update-pessoa.dto';
 import { InjectRepository } from '@nestjs/typeorm';
@@ -41,8 +45,16 @@ export class PessoasService {
     return pessoas;
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} pessoa`;
+  async findOne(id: number) {
+    const pessoa = await this.pessoaRepository.findOne({
+      where: {
+        id,
+      },
+    });
+
+    if (!pessoa) throw new NotFoundException('Pessoa não existe');
+
+    return pessoa;
   }
 
   update(id: number, updatePessoaDto: UpdatePessoaDto) {
