@@ -15,7 +15,14 @@ export class RecadosService {
   ) {}
 
   async findAll() {
-    const recados = await this.recadoRepository.find();
+    const recados = await this.recadoRepository.find({
+      relations: ['de', 'para'],
+      order: { id: 'desc' },
+      select: {
+        de: { id: true, nome: true },
+        para: { id: true, nome: true },
+      },
+    });
     return recados;
   }
 
@@ -23,6 +30,11 @@ export class RecadosService {
     const recado = await this.recadoRepository.findOne({
       where: {
         id,
+      },
+      relations: ['de', 'para'],
+      select: {
+        de: { id: true, nome: true },
+        para: { id: true, nome: true },
       },
     });
 
