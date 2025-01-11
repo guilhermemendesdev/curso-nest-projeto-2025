@@ -22,10 +22,7 @@ Content-Type: application/json
 
   {
     "texto": "ATUALIZAR Recado",
-    "de": "Guilherme",
-    "para": "João",
     "lido": false,
-    "data": "2025-01-06T09:51:04.778Z"
   }
 ### Remove apenas UM recado
 DELETE http://localhost:3000/recados/1
