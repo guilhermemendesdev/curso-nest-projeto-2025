@@ -5,17 +5,15 @@ GET http://localhost:3000/recados
 ?limit=100
 &offset=200
 ### Busca apenas UM recado
-GET http://localhost:3000/recados/2
+GET http://localhost:3000/recados/4
 ### Cria um recado
 POST http://localhost:3000/recados
 Content-Type: application/json
 
   {
     "texto": "Este é um novo Recado",
-    "de": "Guilherme",
-    "para": "João",
-    "lido": false,
-    "data": "2025-01-06T09:51:04.778Z"
+    "deId": 5,
+    "paraId": 5
   }
 
 ### Atualiza um recado
