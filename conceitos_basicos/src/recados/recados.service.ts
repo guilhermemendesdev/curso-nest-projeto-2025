@@ -4,25 +4,15 @@ import { CreateRecadoDto } from './dto/create-recado.dto';
 import { UpdateRecadoDto } from './dto/update-recado.dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
+import { PessoasService } from 'src/pessoas/pessoas.service';
 
 @Injectable()
 export class RecadosService {
   constructor(
     @InjectRepository(Recado)
     private readonly recadoRepository: Repository<Recado>,
+    private readonly pessoasRepository: PessoasService,
   ) {}
-
-  private lastID = 1;
-  private recados: Recado[] = [
-    {
-      id: 1,
-      texto: 'Este é um recado teste',
-      de: 'João',
-      para: 'Maria',
-      lido: false,
-      data: new Date(),
-    },
-  ];
 
   async findAll() {
     const recados = await this.recadoRepository.find();
