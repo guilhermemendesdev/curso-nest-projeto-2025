@@ -67,3 +67,10 @@ Este repositório faz parte de um compromisso pessoal de realizar commits diári
 - CRUD de Pessoa: criando o create com e-mail único na tabela (unique)
 - CRUD de Pessoa: criando o findAll, findOne (Read) e remove (Delete)
 - CRUD de Pessoa: criando o Update
+
+### 11/01/2025
+- Relações ManyToOne e OneToMany entre Entities Recado e Pessoa
+- Injetando dependências de outros módulos c/ "imports" e "exports" de Module
+- Criando um Recado com relação ManyToOne com Pessoa
+- Usando onDelete e onUpdate CASCADE para propagar alterações com relacionamentos
+- Modificando o Updade (Atualização) do Service de Recado para retornar a relação
