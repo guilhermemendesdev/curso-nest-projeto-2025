@@ -33,13 +33,26 @@ export class RecadosService {
   }
 
   async create(createRecadoDto: CreateRecadoDto) {
+    const { deId, paraId, texto } = createRecadoDto;
+
+    const de = await this.pessoasRepository.findOne(deId);
+    const para = await this.pessoasRepository.findOne(paraId);
+
     const novoRecado = {
-      ...createRecadoDto,
+      texto,
+      de,
+      para,
       lido: false,
       data: new Date(),
     };
+
     const recado = this.recadoRepository.create(novoRecado);
-    return await this.recadoRepository.save(recado);
+    await this.recadoRepository.save(recado);
+    return {
+      ...recado,
+      de: { id: recado.de.id },
+      para: { id: recado.para.id },
+    };
   }
 
   async update(id: number, updateRecadoDto: UpdateRecadoDto) {
