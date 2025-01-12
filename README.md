@@ -74,3 +74,6 @@ Este repositório faz parte de um compromisso pessoal de realizar commits diári
 - Criando um Recado com relação ManyToOne com Pessoa
 - Usando onDelete e onUpdate CASCADE para propagar alterações com relacionamentos
 - Modificando o Updade (Atualização) do Service de Recado para retornar a relação
+
+### 12/01/2025
+- DTO e validação de dados para paginação (take/limit e skip/offset do TypeOrm)
