@@ -77,3 +77,6 @@ Este repositório faz parte de um compromisso pessoal de realizar commits diári
 
 ### 12/01/2025
 - DTO e validação de dados para paginação (take/limit e skip/offset do TypeOrm)
+
+### 13/01/2025
+- Pipes - como e quando usar um Pipe de Validação e/ou Transformação de dados
