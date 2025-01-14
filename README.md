@@ -80,3 +80,10 @@ Este repositório faz parte de um compromisso pessoal de realizar commits diári
 
 ### 13/01/2025
 - Pipes - como e quando usar um Pipe de Validação e/ou Transformação de dados
+
+### 14/01/2025
+- Interceptors - Adicionando cabeçalho à resposta HTTP com NestJS Interceptor
+- Interceptors - observando dados antes e depois da execução do método com tap
+- Interceptors - capturando e modificando erros globais da aplicação (Exceptions)
+- Interceptors - criando um cache simples
+- Interceptors - alterando os dados de resposta com map
