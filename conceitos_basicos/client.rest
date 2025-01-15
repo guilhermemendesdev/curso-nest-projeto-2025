@@ -4,6 +4,7 @@
 GET http://localhost:3000/recados
 ?limit=10
 &offset=0
+Authorization: Bearer AquiSeuToken
 ### Busca apenas UM recado
 GET http://localhost:3000/recados/4
 ### Cria um recado
