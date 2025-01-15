@@ -87,3 +87,7 @@ Este repositório faz parte de um compromisso pessoal de realizar commits diári
 - Interceptors - capturando e modificando erros globais da aplicação (Exceptions)
 - Interceptors - criando um cache simples
 - Interceptors - alterando os dados de resposta com map
+
+### 15/01/2025
+- Injeção de dependência em Interceptors, Pipes e outras classes (Injectable)
+- Usando Interceptors para autorização de token de login (Authorization Token)
