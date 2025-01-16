@@ -18,6 +18,5 @@ export class OutroMiddleware implements NestMiddleware {
     //   message: 'Não encontrado',
     // });
     next();
-    console.log('OutroMiddleware: Tchau');
   }
 }
