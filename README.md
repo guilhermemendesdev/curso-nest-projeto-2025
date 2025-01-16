@@ -91,3 +91,9 @@ Este repositório faz parte de um compromisso pessoal de realizar commits diári
 ### 15/01/2025
 - Injeção de dependência em Interceptors, Pipes e outras classes (Injectable)
 - Usando Interceptors para autorização de token de login (Authorization Token)
+
+### 16/01/2025
+- Middleware - Tenha acesso direto à Request e Response do Servidor
+- Exception Filters - Filtrando e manipulando exceções no NestJS
+- Guards - Como permitir ou negar acesso em rotas do servidor NestJs
+- Parâmetros personalizados com createParamDecorator (Custom Param Decorator)
