@@ -8,6 +8,7 @@ import {
   Post,
   Query,
   Req,
+  UseGuards,
   UseInterceptors,
 } from '@nestjs/common';
 import { RecadosService } from './recados.service';
@@ -19,6 +20,7 @@ import { TimingConnectionInterceptor } from 'src/common/interceptors/timing-conn
 import { ErrorHandlingInterceptor } from 'src/common/interceptors/error-handling.interceptor';
 import { AuthTokenInterceptor } from 'src/common/interceptors/auth-token.interceptor';
 import { Request } from 'express';
+import { IsAdminGuard } from 'src/common/guards/is-admin.guard';
 
 @Controller('recados')
 @UseInterceptors(AuthTokenInterceptor, ErrorHandlingInterceptor)
@@ -32,6 +34,7 @@ export class RecadosController {
     return this.recadosService.findAll(paginationDto);
   }
 
+  @UseGuards(IsAdminGuard)
   @Get(':id')
   @UseInterceptors(TimingConnectionInterceptor)
   findOne(@Param('id') id: number) {
