@@ -7,7 +7,6 @@ import {
   Patch,
   Post,
   Query,
-  Req,
   UseGuards,
   UseInterceptors,
 } from '@nestjs/common';
@@ -19,8 +18,8 @@ import { AddHeaderInterceptor } from 'src/common/interceptors/add-header.interce
 import { TimingConnectionInterceptor } from 'src/common/interceptors/timing-connection.interceptor';
 import { ErrorHandlingInterceptor } from 'src/common/interceptors/error-handling.interceptor';
 import { AuthTokenInterceptor } from 'src/common/interceptors/auth-token.interceptor';
-import { Request } from 'express';
 import { IsAdminGuard } from 'src/common/guards/is-admin.guard';
+import { ReqDataParam } from 'src/common/params/req-data-param.decorator';
 
 @Controller('recados')
 @UseInterceptors(AuthTokenInterceptor, ErrorHandlingInterceptor)
@@ -29,8 +28,11 @@ export class RecadosController {
 
   @Get()
   @UseInterceptors(AddHeaderInterceptor)
-  findAll(@Query() paginationDto: PaginationDto, @Req() req: Request) {
-    console.log('RecadosController', req['user']);
+  findAll(
+    @Query() paginationDto: PaginationDto,
+    @ReqDataParam('headers') reqPersonalizada,
+  ) {
+    console.log('reqPersonalizada', reqPersonalizada);
     return this.recadosService.findAll(paginationDto);
   }
 
