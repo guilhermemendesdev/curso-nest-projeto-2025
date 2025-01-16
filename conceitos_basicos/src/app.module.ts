@@ -13,6 +13,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { PessoasModule } from './pessoas/pessoas.module';
 import { SimpleMiddleware } from './common/middleware/simple.middleware';
 import { OutroMiddleware } from './common/middleware/outro.middleware';
+import { APP_FILTER } from '@nestjs/core';
+import { ErrorExceptionFilter } from './common/filters/error-exception.filter';
 
 @Module({
   imports: [
@@ -31,7 +33,13 @@ import { OutroMiddleware } from './common/middleware/outro.middleware';
     PessoasModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [
+    AppService,
+    {
+      provide: APP_FILTER,
+      useClass: ErrorExceptionFilter,
+    },
+  ],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
