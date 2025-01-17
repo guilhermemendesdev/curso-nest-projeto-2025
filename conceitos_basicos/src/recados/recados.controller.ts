@@ -19,7 +19,6 @@ import { TimingConnectionInterceptor } from 'src/common/interceptors/timing-conn
 import { ErrorHandlingInterceptor } from 'src/common/interceptors/error-handling.interceptor';
 import { AuthTokenInterceptor } from 'src/common/interceptors/auth-token.interceptor';
 import { IsAdminGuard } from 'src/common/guards/is-admin.guard';
-import { ReqDataParam } from 'src/common/params/req-data-param.decorator';
 
 @Controller('recados')
 @UseInterceptors(AuthTokenInterceptor, ErrorHandlingInterceptor)
@@ -28,11 +27,7 @@ export class RecadosController {
 
   @Get()
   @UseInterceptors(AddHeaderInterceptor)
-  findAll(
-    @Query() paginationDto: PaginationDto,
-    @ReqDataParam('headers') reqPersonalizada,
-  ) {
-    console.log('reqPersonalizada', reqPersonalizada);
+  findAll(@Query() paginationDto: PaginationDto) {
     return this.recadosService.findAll(paginationDto);
   }
 
