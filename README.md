@@ -97,3 +97,6 @@ Este repositório faz parte de um compromisso pessoal de realizar commits diári
 - Exception Filters - Filtrando e manipulando exceções no NestJS
 - Guards - Como permitir ou negar acesso em rotas do servidor NestJs
 - Parâmetros personalizados com createParamDecorator (Custom Param Decorator)
+
+### 17/01/2025
+- Refatoração do código
