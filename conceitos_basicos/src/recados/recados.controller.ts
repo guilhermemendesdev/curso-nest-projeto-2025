@@ -19,11 +19,15 @@ import { TimingConnectionInterceptor } from 'src/common/interceptors/timing-conn
 import { ErrorHandlingInterceptor } from 'src/common/interceptors/error-handling.interceptor';
 import { AuthTokenInterceptor } from 'src/common/interceptors/auth-token.interceptor';
 import { IsAdminGuard } from 'src/common/guards/is-admin.guard';
+import { RecadosUtils } from './recados.utils';
 
 @Controller('recados')
 @UseInterceptors(AuthTokenInterceptor, ErrorHandlingInterceptor)
 export class RecadosController {
-  constructor(private readonly recadosService: RecadosService) {}
+  constructor(
+    private readonly recadosService: RecadosService,
+    private readonly recadosUtils: RecadosUtils,
+  ) {}
 
   @Get()
   @UseInterceptors(AddHeaderInterceptor)
@@ -35,6 +39,7 @@ export class RecadosController {
   @Get(':id')
   @UseInterceptors(TimingConnectionInterceptor)
   findOne(@Param('id') id: number) {
+    console.log(this.recadosUtils.inverteString('Guilherme'));
     return this.recadosService.findOne(id);
   }
 
