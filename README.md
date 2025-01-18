@@ -100,3 +100,6 @@ Este repositório faz parte de um compromisso pessoal de realizar commits diári
 
 ### 17/01/2025
 - Refatoração do código
+
+### 18/01/2025
+- O básico da injeção de dependências no NestJS (Dependency Injection - DI)
