@@ -21,6 +21,7 @@ import { ErrorHandlingInterceptor } from 'src/common/interceptors/error-handling
 import { AuthTokenInterceptor } from 'src/common/interceptors/auth-token.interceptor';
 import { IsAdminGuard } from 'src/common/guards/is-admin.guard';
 import { RecadosUtils } from './recados.utils';
+import { SERVER_NAME } from 'src/common/constants/server-name.constant';
 
 @Controller('recados')
 @UseInterceptors(AuthTokenInterceptor, ErrorHandlingInterceptor)
@@ -28,7 +29,7 @@ export class RecadosController {
   constructor(
     private readonly recadosService: RecadosService,
     private readonly recadosUtils: RecadosUtils,
-    @Inject('SERVER_NAME')
+    @Inject(SERVER_NAME)
     private readonly serverName: string,
   ) {}
 
