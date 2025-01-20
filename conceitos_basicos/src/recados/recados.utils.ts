@@ -5,3 +5,9 @@ export class RecadosUtils {
     return str.split('').reverse().join('');
   }
 }
+
+export class RecadosUtilsMock {
+  inverteString() {
+    return 'String Mock';
+  }
+}
