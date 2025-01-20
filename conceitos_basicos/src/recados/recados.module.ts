@@ -4,7 +4,7 @@ import { RecadosService } from './recados.service';
 import { Recado } from './entities/recado.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { PessoasModule } from 'src/pessoas/pessoas.module';
-import { RecadosUtils } from './recados.utils';
+import { RecadosUtils, RecadosUtilsMock } from './recados.utils';
 
 @Module({
   imports: [
@@ -15,8 +15,9 @@ import { RecadosUtils } from './recados.utils';
   providers: [
     RecadosService,
     {
-      provide: RecadosUtils,
-      useClass: RecadosUtils,
+      provide: RecadosUtils, // Token
+      useValue: new RecadosUtilsMock(),
+      // useClass: RecadosUtils
     },
   ],
   exports: [
