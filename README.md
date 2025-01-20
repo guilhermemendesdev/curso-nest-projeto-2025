@@ -103,3 +103,7 @@ Este repositório faz parte de um compromisso pessoal de realizar commits diári
 
 ### 18/01/2025
 - O básico da injeção de dependências no NestJS (Dependency Injection - DI)
+- Encapsulamento e exports do módulo + Dependência circular e forwardRef no NestJS
+
+### 19/01/2025
+- Cria módulo de Logs
