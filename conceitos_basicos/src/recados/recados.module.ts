@@ -19,6 +19,10 @@ import { RecadosUtils, RecadosUtilsMock } from './recados.utils';
       useValue: new RecadosUtilsMock(),
       // useClass: RecadosUtils
     },
+    {
+      provide: 'SERVER_NAME',
+      useValue: 'My Name Is NestJS',
+    },
   ],
   exports: [
     {
