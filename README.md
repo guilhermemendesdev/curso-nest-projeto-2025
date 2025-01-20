@@ -107,3 +107,8 @@ Este repositório faz parte de um compromisso pessoal de realizar commits diári
 
 ### 19/01/2025
 - Cria módulo de Logs
+
+### 20/01/2025
+- Providers com useClass e useValue para entregar tokens e valores diferentes
+- Injetando valores que não são classes com "Inject" e "provide" (token)
+- Classes abstratas e interfaces com provide e useClass para Padrões de Projeto
