@@ -3,6 +3,7 @@ import {
   Controller,
   Delete,
   Get,
+  Inject,
   Param,
   Patch,
   Post,
@@ -27,11 +28,14 @@ export class RecadosController {
   constructor(
     private readonly recadosService: RecadosService,
     private readonly recadosUtils: RecadosUtils,
+    @Inject('SERVER_NAME')
+    private readonly serverName: string,
   ) {}
 
   @Get()
   @UseInterceptors(AddHeaderInterceptor)
   findAll(@Query() paginationDto: PaginationDto) {
+    console.log(this.serverName);
     return this.recadosService.findAll(paginationDto);
   }
 
