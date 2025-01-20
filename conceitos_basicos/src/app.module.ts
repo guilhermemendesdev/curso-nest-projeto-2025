@@ -15,6 +15,7 @@ import { SimpleMiddleware } from './common/middleware/simple.middleware';
 import { OutroMiddleware } from './common/middleware/outro.middleware';
 import { APP_FILTER } from '@nestjs/core';
 import { ErrorExceptionFilter } from './common/filters/error-exception.filter';
+import { LogsModule } from './logs/logs.module';
 
 @Module({
   imports: [
@@ -31,6 +32,7 @@ import { ErrorExceptionFilter } from './common/filters/error-exception.filter';
     ConceitosAutomaticoModule,
     RecadosModule,
     PessoasModule,
+    LogsModule,
   ],
   controllers: [AppController],
   providers: [
