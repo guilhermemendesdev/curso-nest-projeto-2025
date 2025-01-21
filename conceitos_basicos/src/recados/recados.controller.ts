@@ -3,7 +3,6 @@ import {
   Controller,
   Delete,
   Get,
-  Inject,
   Param,
   Patch,
   Post,
@@ -21,12 +20,6 @@ import { ErrorHandlingInterceptor } from 'src/common/interceptors/error-handling
 import { AuthTokenInterceptor } from 'src/common/interceptors/auth-token.interceptor';
 import { IsAdminGuard } from 'src/common/guards/is-admin.guard';
 import { RecadosUtils } from './recados.utils';
-import {
-  ONLY_LOWERCASE_LETTERS_REGEX,
-  REMOVE_SPACES_REGEX,
-  SERVER_NAME,
-} from './recados.constants';
-import { RegexProtocol } from 'src/common/regex/regex.protocol';
 
 @Controller('recados')
 @UseInterceptors(AuthTokenInterceptor, ErrorHandlingInterceptor)
@@ -34,20 +27,11 @@ export class RecadosController {
   constructor(
     private readonly recadosService: RecadosService,
     private readonly recadosUtils: RecadosUtils,
-    @Inject(SERVER_NAME)
-    private readonly serverName: string,
-    @Inject(REMOVE_SPACES_REGEX)
-    private readonly removeSpacesRegex: RegexProtocol,
-    @Inject(ONLY_LOWERCASE_LETTERS_REGEX)
-    private readonly onlyLowercaseLettersRegex: RegexProtocol,
   ) {}
 
   @Get()
   @UseInterceptors(AddHeaderInterceptor)
   findAll(@Query() paginationDto: PaginationDto) {
-    console.log(this.removeSpacesRegex.execute(this.serverName));
-    console.log(this.onlyLowercaseLettersRegex.execute(this.serverName));
-    console.log(this.serverName);
     return this.recadosService.findAll(paginationDto);
   }
 
