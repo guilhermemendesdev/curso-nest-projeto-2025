@@ -112,3 +112,8 @@ Este repositório faz parte de um compromisso pessoal de realizar commits diári
 - Providers com useClass e useValue para entregar tokens e valores diferentes
 - Injetando valores que não são classes com "Inject" e "provide" (token)
 - Classes abstratas e interfaces com provide e useClass para Padrões de Projeto
+
+### 21/01/2025
+- Provide, useFactory e inject para Lógica Avançada na Injeção de Dependências
+- Utilizando useFactory com async e await para Gerenciar Providers Assíncronos
+- Criando módulos dinâmicos que recebem configuração (NestJS DynamicModule)
