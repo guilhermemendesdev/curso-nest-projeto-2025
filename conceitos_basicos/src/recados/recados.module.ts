@@ -15,6 +15,10 @@ import {
   imports: [
     TypeOrmModule.forFeature([Recado]),
     forwardRef(() => PessoasModule),
+    // MyDynamicModule.register({
+    //   apiKey: 'Aqui vem a API KEY',
+    //   apiUrl: 'http://blablabla.bla',
+    // }),
   ],
   controllers: [RecadosController],
   providers: [
