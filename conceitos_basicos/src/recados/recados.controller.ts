@@ -3,6 +3,7 @@ import {
   Controller,
   Delete,
   Get,
+  Inject,
   Param,
   Patch,
   Post,
@@ -20,6 +21,12 @@ import { ErrorHandlingInterceptor } from 'src/common/interceptors/error-handling
 import { AuthTokenInterceptor } from 'src/common/interceptors/auth-token.interceptor';
 import { IsAdminGuard } from 'src/common/guards/is-admin.guard';
 import { RecadosUtils } from './recados.utils';
+import { RemoveSpacesRegex } from 'src/common/regex/remove-spaces.regex';
+import { OnlyLowerCaseLettersRegex } from 'src/common/regex/only-lowercase-letters.regex';
+import {
+  ONLY_LOWERCASE_LETTERS_REGEX,
+  REMOVE_SPACES_REGEX,
+} from './recados.constants';
 
 @Controller('recados')
 @UseInterceptors(AuthTokenInterceptor, ErrorHandlingInterceptor)
@@ -27,11 +34,21 @@ export class RecadosController {
   constructor(
     private readonly recadosService: RecadosService,
     private readonly recadosUtils: RecadosUtils,
+    @Inject(REMOVE_SPACES_REGEX)
+    private readonly removeSpacesRegex: RemoveSpacesRegex,
+    @Inject(ONLY_LOWERCASE_LETTERS_REGEX)
+    private readonly onlyLowercaseLettersRegex: OnlyLowerCaseLettersRegex,
   ) {}
 
   @Get()
   @UseInterceptors(AddHeaderInterceptor)
   findAll(@Query() paginationDto: PaginationDto) {
+    console.log(this.removeSpacesRegex.execute('REMOVE OS ESPACOS'));
+    console.log(
+      this.onlyLowercaseLettersRegex.execute(
+        'REMOVE OS ESPACOS letra minúscula',
+      ),
+    );
     return this.recadosService.findAll(paginationDto);
   }
 
