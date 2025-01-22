@@ -117,3 +117,7 @@ Este repositório faz parte de um compromisso pessoal de realizar commits diári
 - Provide, useFactory e inject para Lógica Avançada na Injeção de Dependências
 - Utilizando useFactory com async e await para Gerenciar Providers Assíncronos
 - Criando módulos dinâmicos que recebem configuração (NestJS DynamicModule)
+
+### 22/01/2025
+- Teoria sobre escopo de providers: Scope.DEFAULT, Scope.REQUEST e Scope.TRANSIENT
+- Exemplo para escopo de providers: Scope.DEFAULT, Scope.REQUEST e Scope.TRANSIENT
